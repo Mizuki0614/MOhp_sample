@@ -7,3 +7,20 @@ class IndexPageView(generic.TemplateView):
 
 class PortfolioPageView(generic.TemplateView):
     template_name = "frame/portfolio.html"
+
+
+class PhotographPageView(generic.TemplateView):
+    template_name = "frame/photograph.html"
+
+
+class VideoPageView(generic.TemplateView):
+    template_name = "frame/video.html"
+
+
+class AboutPageView(generic.TemplateView):
+    template_name = "frame/about.html"
+
+
+class ContactPageView(generic.TemplateView):
+    template_name = "frame/contact.html"
+
