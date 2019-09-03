@@ -27,6 +27,5 @@ class AboutPageView(generic.TemplateView):
     template_name = "frame/about.html"
 
 
-# 問い合わせフォーム実装中
-class contact(request, ):
-
+class ContactPageView(generic.TemplateView):
+    template_name = "frame/contact.html"

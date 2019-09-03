@@ -11,5 +11,5 @@ urlpatterns =[
     path('portfolio/video/', views.VideoPageView.as_view(), name='video'),
     path('about/', views.AboutPageView.as_view(), name='about'),
     # お問い合わせフォーム実装中
-    path('contact/', views.contact, name='contact'),
+    path('contact/', views.ContactPageView.as_view(), name='contact'),
 ]
