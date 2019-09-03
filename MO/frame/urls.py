@@ -10,6 +10,6 @@ urlpatterns =[
     path('portfolio/photograph/', views.PhotographPageView.as_view(), name='photograph'),
     path('portfolio/video/', views.VideoPageView.as_view(), name='video'),
     path('about/', views.AboutPageView.as_view(), name='about'),
-    # お問い合わせフォーム未実装
-    path('contact/', views.ContactPageView.as_view(), name='contact'),
+    # お問い合わせフォーム実装中
+    path('contact/', views.contact, name='contact'),
 ]

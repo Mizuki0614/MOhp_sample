@@ -65,12 +65,17 @@
               <dt>お電話番号</dt>
               <dd><input type="tel" name="tel" class="tel"></dd>
               <dt>お問い合わせ種別</dt>
+<!--<dd>の中を<select>から<form>に変更して実装-->
+<!--<dl>の中('送信'ボタンまで)を1つの<form>でまとめたほうがいいのではないか？-->
               <dd>
+                <form action="{% url 'frame:contact' %}" method="post">
+                {% csrf_token %}
                 <select name="type" class="type">
+                {% for inquiry in inquiry_select.choice_set.all %}
                   <option value="予約">予約</option>
-                  <option value="Sample">Sample</option>
-                  <option value="その他お問い合わせ">その他お問い合わせ</option>
+                {% endfor %}
                 </select>
+                </form>
               </dd>
               <dt>ご希望のご連絡方法</dt>
               <dd>
