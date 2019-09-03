@@ -2,7 +2,8 @@ from django.db import models
 from django.utils import timezone
 
 
-# migrate:0001済み
+# migrate:0002_auto_20190903_1505済み
+# セレクトボックス、ラジオボックスで与える選択肢をテーブルで分離
 class Inquiry(models.Model):
 
     name = models.CharField(max_length=50)
