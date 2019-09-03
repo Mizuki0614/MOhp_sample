@@ -1,24 +1,25 @@
-<!DOCTYPE html>
+{% load static %}
+
 <html>
 <head>
 <meta charset="utf-8">
 <title>Contact|Sample</title>
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<link href="{% static 'frame/css/style.css' %}" rel="stylesheet">
 </head>
 <body id="contact">
   
  <!-- header始まり -->
  <header>
   <div class="logo">
-   <a href="index.html"><image scr="images/logo.png" alt="SAMPLE"></a>
+   <a href="{% url 'frame:index' %}"><image scr="{% static 'frame/images/logo.png' %}" alt="SAMPLE"></a>
   </div>
   <nav>
    <ul class="global-nav">
-     <li><a href="portfolio.html">Portfolio</a></li>
-     <li><a href="about.html">About</a></li>
-     <li><a href="contact.html">Contact</a></li>
-   </ul>    
+     <li><a href="{% url 'frame:portfolio' %}">Portfolio</a></li>
+     <li><a href="{% url 'frame:about' %}">About</a></li>
+     <li><a href="{% url 'frame:contact' %}">Contact</a></li>
+   </ul>
   </nav>
  </header>
  <!-- header終わり -->
@@ -64,15 +65,15 @@
               <dt>お電話番号</dt>
               <dd><input type="tel" name="tel" class="tel"></dd>
               <dt>お問い合わせ種別</dt>
-              <dd>
+                <dd>
                 <select name="type" class="type">
                   <option value="予約">予約</option>
                   <option value="Sample">Sample</option>
                   <option value="その他お問い合わせ">その他お問い合わせ</option>
                 </select>
-              </dd>
-              <dt>ご希望のご連絡方法</dt>
-              <dd>
+                </dd>
+                <dt>ご希望のご連絡方法</dt>
+                <dd>
                 <input type="radio" name="contact" value="Eメール">Eメール
                 <input type="radio" name="contact" value="お電話">お電話
               </dd>

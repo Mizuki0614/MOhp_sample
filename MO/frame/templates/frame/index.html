@@ -17,8 +17,8 @@
   <nav>
    <ul class="global-nav">
      <li><a href="{% url 'frame:portfolio' %}">Portfolio</a></li>
-     <li><a href="about.html">About</a></li>
-     <li><a href="contact.html">Contact</a></li>
+     <li><a href="{% url 'frame:about' %}">About</a></li>
+     <li><a href="{% url 'frame:contact' %}">Contact</a></li>
    </ul>    
   </nav>
  </header>
@@ -29,7 +29,7 @@
   <div class="content" >
     <h1>Japan is beautiful, Sample! Sample!</h1>
     <p>ここには、このWebサイトについての概要を記入します。<br>このトップページはフルスクリーンデザインを採用しています。</p>
-    <p class="btn"><a href="portfolio.html">Portfolio Page</a></p>
+    <p class="btn"><a href="{% url 'frame:portfolio' %}">Portfolio Page</a></p>
   </div>
  </div>
  <!-- wrap終わり -->

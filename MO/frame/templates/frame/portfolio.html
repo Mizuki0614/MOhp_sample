@@ -13,13 +13,13 @@
  <!-- header始まり -->
  <header>
   <div class="logo">
-   <a href="index.html"><image scr="{% static 'frame/images/logo.png' %}" alt="SAMPLE"></a>
+   <a href="{% url 'frame:index' %}"><image scr="{% static 'frame/images/logo.png' %}" alt="SAMPLE"></a>
   </div>
   <nav>
    <ul class="global-nav">
-     <li><a href="portfolio.html">Portfolio</a></li>
-     <li><a href="about.html">About</a></li>
-     <li><a href="contact.html">Contact</a></li>
+     <li><a href="{% url 'frame:portfolio' %}">Portfolio</a></li>
+     <li><a href="{% url 'frame:about' %}">About</a></li>
+     <li><a href="{% url 'frame:contact' %}">Contact</a></li>
    </ul>    
   </nav>
  </header>
@@ -32,28 +32,28 @@
       <h1>Portfolio</h1>
       <p>写真やビデオなど、メディアへのリンクのプラットフォームページになります。<br>2カラムデザインによって作成しており、コンテンツ+サイドバーの作りになっています。</p>
       <section>
-        <h2><a href="photograph.html"><img src="{% static 'frame/images/portfolio-photo.jpg' %}" alt="PHOTOGRAPH"></a></h2>
-        <p>上の'PHOTOGRAPH'と書かれた画像、または下の'詳しくみる≫'をクリックすることで画像が観覧できるページへ飛びます。<a href="photograph.html">詳しくみる≫</a></p>
+        <h2><a href="{% url 'frame:photograph' %}"><img src="{% static 'frame/images/portfolio-photo.jpg' %}" alt="PHOTOGRAPH"></a></h2>
+        <p>上の'PHOTOGRAPH'と書かれた画像、または下の'詳しくみる≫'をクリックすることで画像が観覧できるページへ飛びます。<a href="{% url 'frame:photograph' %}">詳しくみる≫</a></p>
       </section>
       <section>
-        <h2><a href="video.html"><img src="{% static 'frame/images/portfolio-video.jpg' %}" alt="VIDEO"></a></h2>
-        <p>上の'VIDEO'と書かれた画像、または下の'詳しくみる≫'をクリックすることで動画が観覧できるページへ飛びます。現在は、YouTubeへのリンクになっていますが、mp4などのメディアにも対応しています。<a href="video.html">詳しくみる≫</a></p>
+        <h2><a href="{% url 'frame:video' %}"><img src="{% static 'frame/images/portfolio-video.jpg' %}" alt="VIDEO"></a></h2>
+        <p>上の'VIDEO'と書かれた画像、または下の'詳しくみる≫'をクリックすることで動画が観覧できるページへ飛びます。現在は、YouTubeへのリンクになっていますが、mp4などのメディアにも対応しています。<a href="{% url 'frame:video' %}">詳しくみる≫</a></p>
       </section>
     </div>
     <aside class="sidebar">
       <section>
         <h2>Photograph</h2>
         <ul>
-          <li><a href="photograph.html#city">街-City</a></li>
-          <li><a href="photograph.html#beach">海-Beach</a></li>
-          <li><a href="photograph.html#forest">森-Forest</a></li>
+          <li><a href="{% url 'frame:photograph' %}#city">街-City</a></li>
+          <li><a href="{% url 'frame:photograph' %}#beach">海-Beach</a></li>
+          <li><a href="{% url 'frame:photograph' %}#forest">森-Forest</a></li>
         </ul>
       </section>
       <section>
         <h2>Video</h2>
         <ul>
-          <li><a href="video.html#movie">Movie</a></li>
-          <li><a href="video.html#short-film">Short film</a></li>
+          <li><a href="{% url 'frame:video' %}#movie">Movie</a></li>
+          <li><a href="{% url 'frame:video' %}#short-film">Short film</a></li>
         </ul>
       </section>
     </aside>
