@@ -120,6 +120,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Pythonanywhere用の設定
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com']
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'waon6.django@gmail.com'
 EMAIL_HOST_PASSWORD = 'waon1601'
