@@ -25,7 +25,7 @@ SECRET_KEY = 'd4yzgete8k0s!gkzazr=7st56uy9w9#0zue#0663k_xtxdwnda'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mizuki0614.pythonanywhere.com']
 
 
 # Application definition
@@ -125,3 +125,7 @@ EMAIL_HOST_USER = 'waon6.django@gmail.com'
 EMAIL_HOST_PASSWORD = 'waon1601'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
